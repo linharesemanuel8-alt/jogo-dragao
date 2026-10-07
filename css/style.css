@@ -1,0 +1,219 @@
+body{
+    background-image: url(../img/background.png);
+    background-repeat: no-repeat;
+    background-size: 100vw 100vh;
+    overflow: hidden;
+}
+
+@keyframes pulsar {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.03);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes balancar {
+    0% {
+        transform: translatex(0);
+    }
+    50% {
+        transform: translatex(-60px);
+    }
+    100% {
+        transform: translatex(0);
+    }
+}
+
+.personagem{
+    position: absolute;
+    left: 7%;
+    top: 42.5%;
+    transform: translate(-50%, -50%);
+    z-index: 50;
+}
+.personagem img{
+    width: 10vw;
+    height: 15vh;
+    animation: flutuar 3s ease-in-out infinite;
+}
+
+.cards{
+    position: absolute;
+    left: 90%;
+    top: 10%;
+    transform: translate(-50%, -50%);
+    gap: 20px;
+    width: 400px;
+}
+.cards img{
+    width: 18vw;
+    height: 6vh;
+}
+.cards img:hover{
+    transition: ease 0.3s;
+    transform: scale(1.05)
+}
+
+.itens img{
+    animation: pulsar 3s ease-in-out infinite;
+}
+.bau{
+    position: absolute;
+    left: 95%;
+    top: 37%;
+    transform: translate(-50%, -50%);
+}
+.bau img{
+    width: 12vw;
+    height: 18vh;
+}   
+.potMana{
+    position: absolute;
+    left: 20%;
+    top: 72%;
+    transform: translate(-50%, -50%);
+}
+.potMana img{
+    width: 6vw;
+    height: 12vh;
+}
+
+.escudo{
+    position: absolute;
+    left: 37.5%;
+    top: 45%;
+    transform: translate(-50%, -50%);
+}
+.escudo img{
+    width: 5vw;
+    height: 10vh;
+}
+
+.potCura{
+    position: absolute;
+    left: 68%;
+    top: 60%;
+    transform: translate(-50%, -50%);
+}
+.potCura img{
+    width: 6vw;
+    height: 18vh;
+}
+
+
+.dragao{
+    position: absolute;
+    left: 62%;
+    top: 23%;
+    transform: translate(-50%, -50%);
+}
+.dragao img{
+    width: 45vw;
+    height: 40vh;
+    animation: pulsar 3s ease-in-out infinite;
+}
+.dragzin{
+    position: absolute;
+    left: 48%;
+    top: 33%;
+    transform: translate(-50%, -50%);
+}
+.dragzin img{
+    width: 20vw;
+    height: 50vh;
+    transition: all 0.5s ease;
+    animation: balancar 3s ease-in-out infinite;
+}
+
+.bossBar{
+    position: absolute;
+    left: 50%;
+    top: 100%;
+    transform: translate(-50%, -50%);
+}
+.bossBar img{
+    width: 50vw;
+    height: 40vh;
+}
+
+.botao{
+    display: flex;
+    gap: 20px;
+}
+.botao button{
+    border-radius: 10px;
+    transition: all 0.3s ease;
+    width: 4vw;
+    height: 6vh;
+    text-align: center;
+    font-size: 40px;
+    background-color: rgb(114, 96, 4);
+    border:2px solid yellow;
+    border-radius: 50%;
+    margin-top: 15px;
+}
+.botao button:hover{
+    cursor: pointer;
+    background-color: chocolate;
+}
+.botao button:active{
+    transform: translateY(8px);
+    box-shadow: 0 1px 0 rgba(0, 0, 0, 0.2);
+}
+
+.superiorEsquerdo{
+    position: absolute;
+    left: 17%;
+    top:  5.7%;
+    transform: translate(-50%, -50%);
+    display: flex;
+}
+
+.progressBar img{
+    width: 16vw;
+    height: 8vh;
+}
+.progressBar img:hover{
+    transition: ease 0.3s;
+    transform: translateY(7px);
+}
+
+.vidas:hover{
+    transition: ease 0.3s;
+    background-color: rgba(255, 0, 0, 0.555);
+    border-radius: 50px;
+}
+.vidas img{
+    padding: 10px;
+    width: 5vw;
+    height: 6vh;
+}
+.morte{
+    z-index: 1000;
+    display: none;
+    position: absolute;
+    font-size: 32px;
+    background-color: brown;
+    left: 44vw;
+    top: 33vh;
+    padding: 40px;
+    border-radius: 20px;
+    text-align: center;
+}
+
+.vitoria{
+    display: none;
+    position: absolute;
+    font-size: 32px;
+    background-color: green;
+    left: 44vw;
+    top: 33vh;
+    padding: 40px;
+    border-radius: 20px;
+    text-align: center;
+}
